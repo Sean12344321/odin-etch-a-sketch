@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Etch-a-sketch</h1>
     <div class="outer-container">
         <div class="sidebar">
             <div>
-                <button>Binary mode</button>
+                <button class="binary">Binary mode</button>
             </div>
             <div>
-                <button>Rainbow mode</button>
+                <button class="rainbow">Rainbow mode</button>
             </div>
             <div>
-                <button>Gradient mode</button>
+                <button class="gradient">Gradient mode</button>
             </div>
             <div>
-                <button>Clear</button>
+                <button class="clear">Clear</button>
             </div>
         </div>
         <div class="container"></div>
-        <div class="place-holder"></div>
+        <div class="place-holder">
+            <button class="setting">Setting</button>
+        </div>
     </div>
 </body>
 </html>
