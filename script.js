@@ -29,8 +29,8 @@ function resetGrid(){
             grid.classList.add("grid");
             grid.addEventListener("mouseover", ()=>{
                 if(colorMode === 1){
-                    grid.style.backgroundColor = "black";
                     grid.style.opacity = 1;
+                    grid.style.backgroundColor = "black";
                 }
                 else if(colorMode === 2){
                     const CHANNEL_NUMBER = 256;
@@ -38,10 +38,12 @@ function resetGrid(){
                     let y = Math.floor(Math.random() * CHANNEL_NUMBER);
                     let z = Math.floor(Math.random() * CHANNEL_NUMBER);
                     grid.style.backgroundColor = `rgb(${x},${y},${z})`;
-                    grid.style.opacity = 1;
+                    grid.style.opacity = Math.random();
                 }
                 else if(colorMode === 3){
-                    grid.style.backgroundColor = "black";
+                    console.log(grid.style.backgroundColor === "");
+                    if(grid.style.backgroundColor === "")
+                        grid.style.backgroundColor = "black";
                     grid.style.opacity = +grid.style.opacity + 0.2;
                 }
             });
